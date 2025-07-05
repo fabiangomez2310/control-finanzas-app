@@ -1,0 +1,17 @@
+.inputGroup {
+  display: flex; /* Usa flexbox para organizar el contenido */
+  flex-direction: column; /* Alinea verticalmente label e input */
+  margin-bottom: 1rem; /* Espacio inferior entre cada grupo */
+}
+
+.inputGroup label {
+  margin-bottom: 0.3rem; /* Espacio entre el label y el input */
+  font-weight: 600; /* Texto del label en seminegrita */
+}
+
+.inputGroup input {
+  padding: 0.5rem; /* Espacio interno del input */
+  border: 1px solid #ccc; /* Borde gris claro */
+  border-radius: 6px; /* Bordes redondeados para suavizar la caja */
+  font-size: 1rem; /* Tamaño estándar del texto */
+}

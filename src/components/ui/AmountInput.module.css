@@ -1,0 +1,18 @@
+.inputGroup {
+  display: flex;            /* Organiza verticalmente */
+  flex-direction: column;
+  margin-bottom: 1rem;      /* Espacio entre grupos */
+}
+
+.inputGroup label {
+  margin-bottom: 0.3rem;    /* Espacio con el input */
+  font-weight: 600;         /* Negrita suave */
+}
+
+.inputGroup input {
+  padding: 0.5rem;          /* Espacio interno */
+  border: 1px solid #ccc;   /* Borde gris claro */
+  border-radius: 6px;       /* Bordes redondeados */
+  font-size: 1rem;
+  appearance: textfield;    /* Quita flechitas en algunos navegadores */
+}

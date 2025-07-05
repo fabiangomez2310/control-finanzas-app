@@ -1,0 +1,19 @@
+/* Estilo del grupo select */
+.selectGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.selectGroup label {
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+
+.selectGroup select {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #fff;
+}

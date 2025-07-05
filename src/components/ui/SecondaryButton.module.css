@@ -1,0 +1,22 @@
+/* Estilo para botón secundario */
+.button {
+  background-color: #e0e0e0;
+  color: #333;
+  font-weight: 600;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.button:hover {
+  background-color: #cacaca;
+}
+
+.button:disabled {
+  background-color: #eee;
+  color: #999;
+  cursor: not-allowed;
+}
