@@ -1,0 +1,73 @@
+/* Contenedor general de layout */
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9fafb;
+}
+
+/* Header superior */
+.header {
+  background-color: #1f2937;
+  color: white;
+  padding: 0.3rem 1.2rem; /* antes: 1rem 2rem */
+  font-size: 1rem;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+
+/* Cuerpo del layout: sidebar + contenido */
+.body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Sidebar lateral */
+.sidebar {
+  width: 220px;
+  background-color: #111827; /* fondo oscuro */
+  color: #e5e7eb;
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  margin-bottom: 1rem;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #9ca3af;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  display: block;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.sidebar a:hover {
+  background-color: #374151;
+  color: white;
+}
+
+.active {
+  background-color: #2563eb; /* azul primario */
+  color: white !important;
+}
+
+/* Contenido principal */
+.content {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+}

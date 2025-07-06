@@ -1,4 +1,3 @@
-/* Estilo del grupo select */
 .selectGroup {
   display: flex;
   flex-direction: column;
@@ -8,12 +7,22 @@
 .selectGroup label {
   margin-bottom: 0.3rem;
   font-weight: 600;
+  color: #374151; /* gris oscuro */
 }
 
 .selectGroup select {
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+  padding: 0.6rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
   font-size: 1rem;
-  background-color: #fff;
+  background-color: #f9fafb;
+  color: #111827;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  appearance: none;
+}
+
+.selectGroup select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
 }

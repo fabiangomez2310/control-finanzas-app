@@ -1,18 +1,31 @@
 .inputGroup {
-  display: flex;            /* Organiza verticalmente */
+  display: flex;
   flex-direction: column;
-  margin-bottom: 1rem;      /* Espacio entre grupos */
+  margin-bottom: 1.2rem;
 }
 
 .inputGroup label {
-  margin-bottom: 0.3rem;    /* Espacio con el input */
-  font-weight: 600;         /* Negrita suave */
+  font-weight: 500;
+  color: #374151;              /* Gris oscuro moderno */
+  margin-bottom: 0.5rem;
 }
 
 .inputGroup input {
-  padding: 0.5rem;          /* Espacio interno */
-  border: 1px solid #ccc;   /* Borde gris claro */
-  border-radius: 6px;       /* Bordes redondeados */
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5db;   /* Gris claro suave */
+  border-radius: 8px;
   font-size: 1rem;
-  appearance: textfield;    /* Quita flechitas en algunos navegadores */
+  outline: none;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.inputGroup input:focus {
+  border-color: #4f46e5;       /* Azul violeta suave */
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
+}
+
+.inputGroup input::-webkit-inner-spin-button,
+.inputGroup input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

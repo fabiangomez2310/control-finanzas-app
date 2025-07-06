@@ -1,22 +1,23 @@
-/* Estilo para botón secundario */
 .button {
-  background-color: #e0e0e0;
-  color: #333;
-  font-weight: 600;
-  padding: 0.6rem 1.2rem;
-  border: none;
+  background-color: #f3f4f6;      /* Gris claro elegante */
+  color: #374151;                 /* Gris oscuro para texto */
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid #d1d5db;      /* Borde gris suave */
   border-radius: 8px;
-  cursor: pointer;
   font-size: 1rem;
-  transition: background-color 0.2s ease-in-out;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
 .button:hover {
-  background-color: #cacaca;
+  background-color: #e5e7eb;      /* Hover gris más fuerte */
+  transform: scale(1.01);
 }
 
 .button:disabled {
-  background-color: #eee;
-  color: #999;
+  background-color: #f9fafb;
+  color: #9ca3af;
   cursor: not-allowed;
 }

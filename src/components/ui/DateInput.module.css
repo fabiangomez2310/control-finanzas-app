@@ -1,18 +1,27 @@
-/* Estilo para campos de fecha */
 .inputGroup {
   display: flex;
   flex-direction: column;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
 }
 
 .inputGroup label {
-  margin-bottom: 0.3rem;
-  font-weight: 600;
+  font-weight: 500;
+  color: #374151;              /* Gris oscuro moderno */
+  margin-bottom: 0.5rem;
 }
 
-.inputGroup input[type="date"] {
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+.inputGroup input {
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5db;   /* Gris claro */
+  border-radius: 8px;
   font-size: 1rem;
+  outline: none;
+  transition: border 0.2s, box-shadow 0.2s;
+  background-color: white;
+  color: #111827;              /* Gris muy oscuro para texto */
+}
+
+.inputGroup input:focus {
+  border-color: #4f46e5;       /* Azul-violeta */
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
 }

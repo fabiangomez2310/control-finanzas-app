@@ -1,0 +1,68 @@
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+.title {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #2f3542;
+  margin-bottom: 2rem;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.card {
+  flex: 1 1 260px;
+  background-color: #fdfdfd;
+  padding: 1.8rem;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-left: 6px solid #ddd;
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+/* Colores sobrios y profesionales */
+.ingreso {
+  border-left-color: #4caf50;
+  background-color: #f1fdf4;
+}
+
+.egreso {
+  border-left-color: #f44336;
+  background-color: #fff5f5;
+}
+
+.saldo {
+  border-left-color: #2196f3;
+  background-color: #f3f9ff;
+}
+
+.card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  color: #2d3436;
+}
+
+.card p {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #2f3542;
+  margin: 0;
+}

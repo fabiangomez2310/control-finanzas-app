@@ -1,21 +1,23 @@
-/* Estilo para botón principal */
 .button {
-  background-color: #007bff;
-  color: white;
+  background-color: #4f46e5;     /* Azul-violeta moderno */
+  color: #ffffff;
   font-weight: 600;
-  padding: 0.6rem 1.2rem;
+  padding: 0.75rem 1.5rem;
   border: none;
   border-radius: 8px;
-  cursor: pointer;
   font-size: 1rem;
-  transition: background-color 0.2s ease-in-out;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
 }
 
 .button:hover {
-  background-color: #0056b3;
+  background-color: #4338ca;     /* Más oscuro al pasar mouse */
+  transform: scale(1.02);
 }
 
 .button:disabled {
-  background-color: #ccc;
+  background-color: #c7d2fe;     /* Azul desactivado */
   cursor: not-allowed;
+  color: #eee;
 }

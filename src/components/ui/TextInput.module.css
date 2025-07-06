@@ -1,17 +1,27 @@
 .inputGroup {
-  display: flex; /* Usa flexbox para organizar el contenido */
-  flex-direction: column; /* Alinea verticalmente label e input */
-  margin-bottom: 1rem; /* Espacio inferior entre cada grupo */
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
 }
 
 .inputGroup label {
-  margin-bottom: 0.3rem; /* Espacio entre el label y el input */
-  font-weight: 600; /* Texto del label en seminegrita */
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+  color: #374151; /* gris oscuro */
 }
 
 .inputGroup input {
-  padding: 0.5rem; /* Espacio interno del input */
-  border: 1px solid #ccc; /* Borde gris claro */
-  border-radius: 6px; /* Bordes redondeados para suavizar la caja */
-  font-size: 1rem; /* Tamaño estándar del texto */
+  padding: 0.6rem;
+  border: 1px solid #d1d5db; /* gris claro */
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #f9fafb;
+  color: #111827;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.inputGroup input:focus {
+  outline: none;
+  border-color: #2563eb; /* azul primario */
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
 }
