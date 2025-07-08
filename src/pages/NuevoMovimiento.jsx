@@ -1,4 +1,4 @@
-import React, { lazy, useState } from 'react'
+import React, { useState } from 'react'
 
 import styles from './NuevoMovimiento.module.css';
 
@@ -11,7 +11,7 @@ import DateInput from "../components/ui/DateInput";
 import PrimaryButton from "../components/ui/PrimaryButton";
 import SecondaryButton from "../components/ui/SecondaryButton";
 
-const NuevoMovimiento = () => {
+const NuevoMovimiento = ({agregarMovimiento}) => {
 
   const navigate = useNavigate();
 
@@ -33,8 +33,27 @@ const NuevoMovimiento = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Movimiento registrado:". form);
-    // guardar 
+
+    if(!form.description || !form.amount || !form.type || !form.category || !form.date){
+      alert("Por favor completa los campos obligatorios")
+      return;
+    }
+
+    if(isNaN(parseFloat(form.amount)) || parseFloat(form.amount) <= 0 ){
+      alert("El monto debe ser un numero mayor a 0")
+      return;
+    }
+
+    const nuevoMovimiento = {
+      id: Date.now(),
+      ...form,
+      amount : parseFloat(form.amount),
+      date : new Date(form.date).toISOString(),
+
+    }
+
+    console.log("Movimiento registrado:", form);
+    agregarMovimiento(nuevoMovimiento)
     navigate("/");
   }
 
