@@ -14,7 +14,7 @@ const AppRouter = ({movimientos, agregarMovimiento, eliminarMovimiento}) => {
       <Route path="/" element={<MainLayout />}>
         <Route index element={<ListaMovimientos movimientos={movimientos} eliminarMovimiento={eliminarMovimiento} />} />
         <Route path="nuevo" element={<NuevoMovimiento agregarMovimiento={agregarMovimiento} />} />
-        <Route path="editar/:id" element={<EditarMovimiento movimientos={movimientos} />} />
+        <Route path="editar/:id" element={<EditarMovimiento editar movimiento={editar movimiento} movimientos={movimientos} />} />
         <Route path="resumen" element={<ResumenFinanciero movimientos={movimientos} />} />
       </Route>
     </Routes>
