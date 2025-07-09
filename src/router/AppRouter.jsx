@@ -8,13 +8,13 @@ import NuevoMovimiento from "../pages/NuevoMovimiento";
 import EditarMovimiento from "../pages/EditarMovimiento";
 import ResumenFinanciero from "../pages/ResumenFinanciero";
 
-const AppRouter = ({movimientos, agregarMovimiento, eliminarMovimiento}) => {
+const AppRouter = ({movimientos, agregarMovimiento, eliminarMovimiento, editarMovimiento}) => {
   return (
     <Routes>
       <Route path="/" element={<MainLayout />}>
         <Route index element={<ListaMovimientos movimientos={movimientos} eliminarMovimiento={eliminarMovimiento} />} />
         <Route path="nuevo" element={<NuevoMovimiento agregarMovimiento={agregarMovimiento} />} />
-        <Route path="editar/:id" element={<EditarMovimiento movimientos={movimientos} />} />
+        <Route path="editar/:id" element={<EditarMovimiento movimientos={movimientos} editarMovimiento={editarMovimiento} />} />
         <Route path="resumen" element={<ResumenFinanciero movimientos={movimientos} />} />
       </Route>
     </Routes>

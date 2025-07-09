@@ -87,8 +87,8 @@ const NuevoMovimiento = ({agregarMovimiento}) => {
             value={form.type}
             onChange={handleChange}
             options={[
-              {value: "ingreso", label: "Ingreso"},
-              {value: "egreso", label: "Egreso"},
+              {value: "INGRESO", label: "INGRESO"},
+              {value: "EGRESO", label: "EGRESO"},
             ]}
             required
           />
@@ -98,9 +98,13 @@ const NuevoMovimiento = ({agregarMovimiento}) => {
             value={form.category}
             onChange={handleChange}
             options={[
-              {value: 'comida', label: 'Comida'},
-              {value: 'transporte', label: 'Transporte'},
-              {value: 'servicios', label: 'Servicios'}
+              {value: 'COMIDA', label: 'Comida'},
+              {value: 'TRANSPORTE', label: 'Transporte'},
+              {value: 'SERVICIOS', label: 'Servicios'},
+              {value: 'SALARIO', label: 'Salario'},
+              {value: 'HONORARIOS', label: 'Honorarios'},
+              {value: 'OTROS', label: 'Otros'}
+
             ]}
           />
           <DateInput 

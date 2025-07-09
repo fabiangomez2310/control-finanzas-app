@@ -1,7 +1,16 @@
 import React, {useState, useEffect} from 'react'
 
+
+import styles from './EditarMovimiento.module.css';
+
 import { useParams, useNavigate } from 'react-router-dom'
 
+import TextInput from "../components/ui/TextInput";
+import AmountInput from "../components/ui/AmountInput";
+import SelecInput from "../components/ui/SelectInput";
+import DateInput from "../components/ui/DateInput";
+import PrimaryButton from "../components/ui/PrimaryButton";
+import SecondaryButton from "../components/ui/SecondaryButton";
 
 const EditarMovimiento = ({movimientos, editarMovimiento}) => {
 
@@ -33,7 +42,7 @@ const EditarMovimiento = ({movimientos, editarMovimiento}) => {
   }, [movimiento])
 
 
-  if(!movimiento) return <p>Movimiento no enocontrado</p>
+  if(!movimiento) return <p>Movimiento no encontrado</p>
 
   const handleChange = (e) => {
     setForm({
@@ -62,46 +71,65 @@ const EditarMovimiento = ({movimientos, editarMovimiento}) => {
   }
   
   return (
-    <div>
-      <h2>Editar Movimiento</h2>
+    <div className={styles.formContainer}>
+      <h2 className={styles.title}>Editar Movimiento</h2>
       <form onSubmit={handleSubmit}>
-        <input
-          name="description"
+        <TextInput
+          label="Descripcion"
+          name='description'
           value={form.description}
           onChange={handleChange}
-          placeholder="Descripción"
+          placeholder='Ej: Pasaje en bus'
           required
         />
-        <input
-          name="amount"
-          type="number"
-          value={form.amount}
-          onChange={handleChange}
-          placeholder="Monto"
-          required
-        />
-        <select name="type" value={form.type} onChange={handleChange} required>
-          <option value="">Seleccione tipo</option>
-          <option value="ingreso">Ingreso</option>
-          <option value="egreso">Egreso</option>
-        </select>
-        <select name="category" value={form.category} onChange={handleChange}>
-          <option value="">Seleccione categoría</option>
-          <option value="comida">Comida</option>
-          <option value="transporte">Transporte</option>
-          <option value="servicios">Servicios</option>
-        </select>
-        <input
-          type="date"
-          name="date"
-          value={form.date}
-          onChange={handleChange}
-          required
-        />
-        <button type="submit">Guardar Cambios</button>
-        <button type="button" onClick={handleCancel}>
-          Cancelar
-        </button>
+
+        <AmountInput 
+            label="Monto $"
+            name="amount"
+            value={form.amount}
+            onChange={handleChange}
+            placeholder='Ej: 3000'
+            required
+          />
+        
+        
+        <SelecInput 
+            label="Tipo de movimiento"
+            name="type"
+            value={form.type}
+            onChange={handleChange}
+            options={[
+              {value: "INGRESO", label: "INGRESO"},
+              {value: "EGRESO", label: "EGRESO"},
+            ]}
+            required
+          />
+        <SelecInput
+            label="Categoria"
+            name="category"
+            value={form.category}
+            onChange={handleChange}
+            options={[
+              {value: 'COMIDA', label: 'Comida'},
+              {value: 'TRANSPORTE', label: 'Transporte'},
+              {value: 'SERVICIOS', label: 'Servicios'},
+              {value: 'SALARIO', label: 'Salario'},
+              {value: 'HONORARIOS', label: 'Honorarios'},
+              {value: 'OTROS', label: 'Otros'}
+
+            ]}
+          />
+        <DateInput 
+            label="Fecha"
+            name="date"
+            value={form.date}
+            onChange={handleChange}
+            required
+          />
+        <div className={styles.buttonGroup}>
+            <PrimaryButton type='submit'>Guardar</PrimaryButton>
+            <SecondaryButton onClick={handleCancel}>Cancelar</SecondaryButton>
+          </div>
       </form>
     </div>
   )
