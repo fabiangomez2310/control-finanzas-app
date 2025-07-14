@@ -56,9 +56,6 @@ const App = () => {
     }
   };
 
-  if (loading) {
-    return <p style={{ textAlign: 'center' }}>Cargando movimientos...</p>;
-  }
 
   return (
     <AppRouter

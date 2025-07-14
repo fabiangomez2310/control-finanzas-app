@@ -9,7 +9,7 @@ const AmountInput = ({
   placeholder = "",
   required = false,
   min = "0",
-  step = "100",
+  step = "0.01",
 }) => {
   return (
     <div className={styles.inputGroup}>

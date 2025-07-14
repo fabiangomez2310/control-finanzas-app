@@ -1,17 +1,14 @@
 import React from "react";
 import styles from "./ResumenFinanciero.module.css";
 
-const ResumenFinanciero = ({movimientos}) => {
+const ResumenFinanciero = ({ movimientos }) => {
+  const ingresos = movimientos.filter((m) => m.type === "INGRESO");
+  const egresos = movimientos.filter((m) => m.type === "EGRESO");
+
+  const totalIngresos = ingresos.reduce((sum, m) => sum + Number(m.amount), 0);
+  const totalEgresos = egresos.reduce((sum, m) => sum + Number(m.amount), 0);
+  const saldo = totalIngresos - totalEgresos;
   
-      const ingresos = movimientos.filter((m) => m.type === "INGRESO");
-      const egresos = movimientos.filter((m) => m.type === "EGRESO");
-
-      const totalIngresos = ingresos.reduce((sum, m) => sum + m.amount, 0 )
-      const totalEgresos = egresos.reduce((sum, m) => sum + m.amount, 0 )
-      const saldo = totalIngresos - totalEgresos;
-      
- 
-
   return (
     <div className={styles.container}>
       <h2 className={styles.title}>Resumen Financiero</h2>
